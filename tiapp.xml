@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app 
+  xmlns:ti="http://ti.appcelerator.org">
+  <id>com.biotelligent.safe2eat</id>
+  <name>FollowYourFeet</name>
+  <version>1.0.131.1001310927</version>
+  <publisher>Biotelligent Ltd</publisher>
+  <url>http://follow-your-feet.local/</url>
+  <description>Find your way. Freely.</description>
+  <copyright>2016 by Follow Your Feet</copyright>
+  <icon>appicon.png</icon>
+  <fullscreen>false</fullscreen>
+  <navbar-hidden>false</navbar-hidden>
+  <analytics>false</analytics>
+  <guid>b31caab4-ea23-4a23-9bbb-21b466dac7b4</guid>
+  <!--guid>64b2f877-5beb-4f21-9aaa-3e9bef49f960</guid-->
+  <property name="ti.ui.defaultunit" type="string">dp</property>
+  <property name="ti.android.bug2373.finishfalseroot" type="bool">true</property>
+  <property name="ti.android.bug2373.disableDetection" type="bool">false</property>
+  <property name="ti.android.bug2373.restartDelay" type="int">500</property>
+  <property name="ti.android.bug2373.finishDelay" type="int">0</property>
+  <property name="ti.android.bug2373.skipAlert" type="bool">true</property>
+  <property name="ti.android.bug2373.message">2373 Initializing</property>
+  <property name="ti.android.bug2373.title">2373 Restart Required</property>
+  <property name="ti.android.bug2373.buttonText">2373 Continue</property>
+  <!-- To test interactive push notifications create an Arrow Datasource and set: -->
+  <property name="acs-api-key" type="string">QRH7UPhAysGwaG8zdJ9L5Me3ggT8VDx3</property>
+  <property name="run-on-main-thread" type="bool">false</property>
+  <ios>
+    <use-autolayout>false</use-autolayout>
+    <use-app-thinning>false</use-app-thinning>
+    <min-ios-ver>9.1</min-ios-ver>
+    <min-sdk-ver>9.1</min-sdk-ver>
+    <plist>
+      <dict>
+        <key>UISupportedInterfaceOrientations~iphone</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationPortraitUpsideDown</string>
+          <string>UIInterfaceOrientationLandscapeLeft</string>
+          <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+        <key>UIRequiresPersistentWiFi</key>
+        <false/>
+        <key>UIPrerenderedIcon</key>
+        <false/>
+        <key>UIStatusBarHidden</key>
+        <false/>
+        <key>UIStatusBarStyle</key>
+        <string>UIStatusBarStyleLightContent</string>
+      </dict>
+    </plist>
+  </ios>
+  <android 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--tool-api-level>21</tool-api-level-->
+    <manifest android:installLocation="auto" android:versionName="1.0.131" android:versionCode="1001310927">
+      <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="23"/>
+      <uses-permission android:name="android.permission.WAKE_LOCK"/>
+      <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+      <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+      <uses-permission android:name="android.permission.READ_CONTACTS"/>
+      <application android:debuggable="true" android:theme="@style/Theme.Feet"/>
+      <!-- Allows the API to download data from Google Map servers -->
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <!-- Allows the API to cache data -->
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      <!-- Use GPS for device location -->
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+      <!-- Use Wi-Fi or mobile connection for device location -->
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+      <!-- Allows the API to access Google web-based services -->
+      <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+      <!-- Specify OpenGL ES 2.0 as a requirement -->
+      <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+      <!-- Replace com.domain.appid with your application ID -->
+      <uses-permission android:name="com.biotelligent.safe2eat.permission.MAPS_RECEIVE"/>
+      <permission android:name="com.biotelligent.safe2eat.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+      <application android:debuggable="true" android:theme="@style/Theme.Feet">
+        <!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBMXouf_n2eBljMaNVyxFW2e8lhf3OrQvQ"/>
+      </application>
+    </manifest>
+  </android>
+  <mobileweb>
+    <precache/>
+    <splash>
+      <enabled>true</enabled>
+      <inline-css-images>true</inline-css-images>
+    </splash>
+    <theme>default</theme>
+  </mobileweb>
+  <modules>
+    <module platform="commonjs">ti.cloud</module>
+    <module platform="android">ti.cloudpush</module>
+    <module platform="android">com.tripvi.drawerlayout</module>
+    <module platform="android">com.alcoapps.actionbarextras</module>
+    <module platform="android">dk.napp.drawer</module>
+    <module platform="iphone">dk.napp.drawer</module>
+    <module platform="android">com.rkam.swiperefreshlayout</module>
+    <module platform="iphone">ti.map</module>
+    <module platform="android">ti.map</module>
+  </modules>
+  <deployment-targets>
+    <target device="android">true</target>
+    <target device="ipad">false</target>
+    <target device="iphone">true</target>
+    <target device="mobileweb">false</target>
+    <target device="windows">false</target>
+  </deployment-targets>
+  <sdk-version>5.3.0.GA</sdk-version>
+  <plugins>
+    <plugin version="1.0">ti.alloy</plugin>
+  </plugins>
+  <property name="appc-app-id" type="string">566e9e14ec3515443247abe9</property>
+  <!--property name="appc-app-id" type="string">566acde6109423eb592f56be</property><property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property><property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property><property name="acs-oauth-secret-development" type="string">sD9vd6QI4woLusYIJ0RO6UltqgnUNOpy</property><property name="acs-oauth-key-development" type="string">4BUuzMQPWJtNyWZVYbMeNYfeUxrLEL79</property><property name="acs-api-key-development" type="string">QRH7UPhAysGwaG8zdJ9L5Me3ggT8VDx3</property><property name="acs-username-development" type="string">appc_app_user_dev</property><property name="acs-password-development" type="string">of2ttTdlqzEyBoQErR</property><property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property><property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property><property name="acs-oauth-secret-production" type="string">sD9vd6QI4woLusYIJ0RO6UltqgnUNOpy</property><property name="acs-oauth-key-production" type="string">4BUuzMQPWJtNyWZVYbMeNYfeUxrLEL79</property><property name="acs-api-key-production" type="string">QRH7UPhAysGwaG8zdJ9L5Me3ggT8VDx3</property><property name="acs-username-production" type="string">appc_app_user_dev</property><property name="acs-password-production" type="string">of2ttTdlqzEyBoQErR</property><property name="xacs-oauth-secret-production" type="string">fyQ8feymhS4WX9qXxIKwUvU8RGj9mXKz</property><property name="xacs-oauth-key-production" type="string">agVbR9h7BX3o2XeceRyVzkJnylwvU6ps</property><property name="xacs-api-key-production" type="string">MQSKzVDSXAdMrw3nLKWz2SO4lbTQKD7P</property><property name="xacs-username-production" type="string">appc_app_user</property><property name="xacs-password-production" type="string">mbpQ59yZhQqnWubiK3</property><property name="appc-org-id" type="string">100001965</property><property name="appc-creator-user-id" type="string">2ecae091-b0d3-456f-81d5-f2022d489ec8</property-->
+</ti:app>

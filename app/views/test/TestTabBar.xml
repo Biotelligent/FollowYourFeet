@@ -1,0 +1,4 @@
+<Alloy>
+	<View class="tabbar" id="tabbar" tabheight="30" height="30">
+	</View>
+</Alloy>

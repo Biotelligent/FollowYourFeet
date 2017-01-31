@@ -1,0 +1,69 @@
+<Alloy>
+    <View id="mainview" class="feet-view-main" >
+    <Require src="NavBar" type="view" id="navbar" title="L('menu-config', 'Configure')"/>
+    <ScrollView id="notificationview" class="feet-view-inner" >
+
+    <View top="10" class="settingslineview" layout="absolute">  
+      <Label class="settingslabel" top="10" text="Server"/>
+      <TextField id="server" class="settingsinput" value="192.168.2.2" onReturn="handleInputReturn"/>
+    </View>
+    
+    <View top="0" class="settingslineview" layout="absolute">  
+      <Label class="settingslabel" text="Forward"/>
+      <TextField id="forward" class="settingsinput" value='{t:20, s:10000, a:"f"}' onReturn="handleInputReturn"/>
+    </View>
+        <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text="Stop"/>
+            <TextField id="stop" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+        <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text="Left"/>
+            <TextField id="left" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+        <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text="Right"/>
+            <TextField id="right" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+
+        <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text=" 1L"/>
+            <TextField id="calibrate01l" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+        <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text=" 1R"/>
+            <TextField id="calibrate01r" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+        <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text=" 2L"/>
+            <TextField id="calibrate2L" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+        <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text=" 2R"/>
+            <TextField id="calibrate2R" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+         <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text=" 3L"/>
+            <TextField id="calibrate3L" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+        <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text=" 3R"/>
+            <TextField id="calibrate3R" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+        <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text=" 4L"/>
+            <TextField id="calibrate4L" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+        <View top="0" class="settingslineview" layout="absolute">
+            <Label class="settingslabel" text=" 4R"/>
+            <TextField id="calibrate4R" class="settingsinput" value='{t:20, s:10000, a:""}' onReturn="handleInputReturn"/>
+        </View>
+
+    <View id="aboutView" top="240" layout="absolute">
+      <Label id="aboutLabel" class="menusubtitlelabel" top="0" left="30" right="30" height="Ti.UI.SIZE" wordWrap="true" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+      <Label id="visitLabel" class="visitlabel" top="50" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" text="http://www.follow-your-feet.local"/>
+      <Label id="copyrightLabel" class="menusubtitlelabel" top="80" left="30" right="30" height="Ti.UI.SIZE" wordWrap="true" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER"/>
+    </View>
+
+    </ScrollView>
+  </View>
+</Alloy>

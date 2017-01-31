@@ -1,0 +1,29 @@
+<Alloy>
+  <View class="view-height-width-fit" id="notificationview" layout="absolute" backgroundColor="#F1F5F8" onClick="onNotificationClick">
+    <ActivityIndicator id="activityIndicator" class="notificationActivityIndicator" />
+    <Widget src="ti.ux.iconfont" id="icon" class="notification-icon" iconColor="gray" icon="fa-bullhorn">
+
+    </Widget>
+    <Label class="notification-label" id="label" height="Ti.UI.FILL" />
+
+	  <View id="buttonView" backgroundColor="#F1F5F8" right="9" width="80" top="0" height="40" zIndex="999" visible="false">
+	    <Widget src="ti.ux.iconbutton" id="filterSecondRightButton" class="navbar-uxbutton" zIndex="2"
+	      left="0"
+	      top="0"
+	      width="40"
+	      icon="fa-arrows-v"
+	      xplatform="true"
+	      />
+	    <Widget src="ti.ux.iconbutton" id="filterRightButton" class="share-uxbutton" zIndex="2"
+	      top="0"
+	      left="40"
+	      width="40"
+	      icon="fa-trash-o"
+	      iconSize="20"
+	      xplatform="true"
+	      />
+	  </View>
+
+    <View id="sep" class="view-row-separator"/>
+  </View>
+</Alloy>

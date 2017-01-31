@@ -1,0 +1,29 @@
+<Alloy>
+	<View class="tabbar" id="tabbar" >
+		<View class="tabbar" id="searchView" left="15%" right="0" zIndex="9999" height="Ti.UI.FILL" backgroundColor="#5694FC" layout="absolute" visible="false">
+        <TextField id="searchText" xclass="signup-text"
+        	left="0"
+        	top="10"
+        	right="95"
+        	height="38"
+        	color="#616161"
+        	backgroundColor="white"
+        	returnKeyType="Ti.UI.RETURNKEY_SEARCH"
+        	autocorrect="false"
+        	autocapitalization="Ti.UI.TEXT_AUTOCAPITALIZATION_NONE"
+        	maxLength="20"
+        	hintText="L('hint-search', 'Search')"
+          keyboardType="Ti.UI.KEYBOARD_NAMEPHONE_PAD"
+        	zIndex="4"
+        	borderRadius="4"
+        	onChange="doSearchTextChange"
+        	onReturn="doSearchTextReturn"
+        />
+        <View id="infoContainer" class="signup-rightbuttonview" layout="absolute" zIndex="5" right="70" width="48" top="10" height="38" borderRadius="4" onClick="doClearSearchClick">
+           <ImageView id="clearImage" class="signup-rightbuttonimage" preventDefaultImage="true" image="/images/back_muted.png" />
+        </View>
+			<Button id="cancelsearchButton" top="0" right="0" width="70" height="Ti.UI.FILL" zIndex="6" backgroundColor='transparent' tintColor='white' title="L('button-cancel', 'Cancel')" onClick="doCancelSearchClick" />
+		</View>
+	</View>
+  <!-- without cancelbutton, searchText right=10, info right=15, and must be changed in code; searchText right was 95 info right was 70,  -->
+</Alloy>

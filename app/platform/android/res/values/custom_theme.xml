@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- https://android.googlesource.com/platform/frameworks/support/+/4121f22713bbed467a977ec0d867ef53989ff374/v14/appcompat/res/values/themes.xml -->
+   <style name="Theme.DrawerTest" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorPrimary">@color/primary</item>
+  </style>
+
+  <style name="Theme.DrawerTest.NoActionBar" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowTranslucentStatus">true</item>
+    <item name="colorPrimary">@color/primary</item>
+  </style>
+
+  <style name="Theme.Feet" parent="@style/Theme.AppCompat.NoActionBar">
+	  <item name="android:windowActionBar">false</item>
+    <item name="android:windowNoTitle">true</item>
+		<!-- AppCompat Compatibility -->
+		<item name="windowActionBar">false</item>
+		<item name="windowNoTitle">true</item>
+    <item name="android:windowTranslucentStatus">true</item>
+    <item name="android:textColorPrimary">#ffffff</item>
+		<item name="android:colorAccent">#ffffff</item>
+		<item name="android:statusBarColor">#00384c</item>
+		<item name="android:navigationBarColor">#00384c</item>
+		<item name="android:cursorVisible">true</item>
+	</style>
+</resources>

@@ -1,0 +1,155 @@
+{
+  "global": {
+    "autoStyle": true,
+    "actionbar": false,
+    "drawermenu": true,
+    "leftDrawerWidth": "240dp",
+    "drawerShadowWidth": 0,
+    "listitemHeight": 76,
+    "selectrowHeight": 60,
+    "buttonBorderRadius": 4,
+    "backgroundColorDark": "#161616",
+    "backgroundColorBlue": "#00384c",
+    "backgroundColorLight": "white",
+    "buttonColorBlue": "#0076b6",
+    "buttonColorGreen": "#22c064",
+    "tabColorSelected": "#2d9ab8",
+    "separatorColor": "#C5C5C5",
+    "textColorDark": "#616161",
+    "titleColorDark": "black",
+    "subtitleColorDark": "#C5C5C5",
+    "titleColorLight": "white",
+    "subtitleColorLight": "#cccccc",
+    "textColorLight": "white",
+    "hintTextColorLight": "white",
+    "textColorLink": "#2d9ab8",
+    "disabledTextColorLight": "#cccccc",
+    "fontFamily": "Roboto-Regular",
+    "infoFont": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": "12",
+      "fontWeight": "normal"
+    },
+    "titleFont": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": "16dp",
+      "fontWeight": "normal"
+    },
+    "subtitleFont": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": "11dp"
+    },
+    "detailFont": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": "13dp"
+    },
+    "navbarFont": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": "20",
+      "fontWeight": "normal"
+    },
+    "inputFont": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": "16",
+      "fontWeight": "normal"
+    },
+    "notificationFont": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": "13"
+    },
+    "iconButtonFont": {
+      "fontFamily": "FontAwesome",
+      "fontSize": "28dp",
+      "fontWeight": "normal"
+    },
+    "fixedWidthFont": {
+      "fontFamily": "Courier New",
+      "fontSize": "13",
+      "fontWeight": "normal"
+    },
+    "Skin": {
+      "zBlueColor": "#5694FC",
+      "zLightBlueColor": "#F1F5F8",
+      "zOrangeColor": "#FF8416",
+      "zBlueButtonColor": "#3876cc",
+      "zGreenButtonColor": "#6ece1d",
+      "zGreenColor": "#60c91d",
+      "textColor": "#616161",
+      "defaultTextColor": "#616161",
+      "lightTextColor": "#C5C5C5",
+      "fadedTextColor": "#C5C5C5",
+      "extraLightTextColor": "#EBEBEB",
+      "hintTextColor": "#D7D7D7",
+      "inverseTextColor": "white",
+      "inverseFadedTextColor": "gray",
+      "inverseLightTextColor": "gray",
+      "backgroundColor": "white",
+      "textBorderRadius": 0,
+      "drawerShadowWidth": 50,
+      "fontFamily": "Roboto-Regular",
+      "navbarFont": {
+        "fontFamily": "Roboto-Regular",
+        "fontSize": "20"
+      },
+      "titleFont": {
+        "fontFamily": "Roboto-Regular",
+        "fontSize": "16",
+        "fontWeight": "normal"
+      },
+      "subtitleFont": {
+        "fontFamily": "Roboto-Regular",
+        "fontSize": "11"
+      },
+      "fixedWidthFont": {
+        "fontFamily": "Courier New",
+        "fontSize": "13",
+        "fontWeight": "normal"
+      },
+      "messageSidePadding": 5,
+      "messageInputHeight": 54,
+      "buttonBorderRadius": 4
+    }
+  },
+  "ios": {
+    "inputFont": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": "18",
+      "fontWeight": "normal"
+    },
+    "detailFont": {
+      "fontFamily": "Roboto-Regular",
+      "fontSize": "12dp"
+    }
+  },
+  "env:development": {
+    "isDebugMode": true,
+    "isAdhocMode": false,
+    "isProduction": false,
+    "profiling": true,
+    "logging": true
+  },
+  "env:test": {
+    "isDebugMode": true,
+    "isAdhocMode": false,
+    "isProduction": false,
+    "profiling": true,
+    "logging": true
+  },
+  "env:production": {
+    "isDebugMode": false,
+    "isAdhocMode": true,
+    "isProduction": false,
+    "profiling": true,
+    "logging": true
+  },
+  "dependencies": {
+    "ti.ux.iconfont": "*",
+    "ti.ux.iconlabel": "*",
+    "ti.ux.iconvalue": "*",
+    "ti.ux.iconbutton": "*",
+    "nl.fokkezb.drawer": "*",
+    "nl.fokkezb.loading": "*",
+    "nl.fokkezb.pullToRefresh": "*",
+    "yy.alert": "*"
+  }
+}

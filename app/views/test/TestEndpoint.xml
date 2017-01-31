@@ -1,0 +1,9 @@
+<Alloy>
+    <View id="mainview" layout="vertical" class="pin-view">
+      <Require src="NavBar" type="view" id="navbar" bartype="modal" title="L('menu-apitest', 'API Test')"/>
+
+      <TextField value="username" class="form-text"></TextField>
+      <TextField value="password" class="form-text"></TextField>
+      <Button class="blue-button" onClick="login">Login In Jade Suceeded</Button>
+    </View>
+</Alloy>

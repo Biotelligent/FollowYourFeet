@@ -1,0 +1,47 @@
+<Alloy>
+  <View id="mainview" layout="absolute" borderRadius="0" top="0">
+    <Require src="NavBar" type="view" id="navbar" title="L('menu-debugview', 'Debug')"/>
+    <View top="60">
+      <Require src="test/TestTabBar" type="view" id="tabbar" top="0" height="30"/>
+    </View>
+
+    <View id="masterView" top="90" bottom="0" backgroundColor="white" layout="vertical">
+    <View id="searchResultOffsetView" top="0" bottom="0" backgroundColor="white" layout="absolute">
+       <View id="configView" zIndex="8" visible="false" top="0" bottom="0" left="0" backgroundColor="white">
+	      <ScrollView class="debugscrollview" height="Ti.UI.FILL" layout="vertical">
+	        <Label class="label-font1" id="labelFont1" text="This is font1 - Roboto ZoopaChat" top="0" width="Ti.UI.FILL" xheight="Ti.UI.SIZE" />
+	        <Label class="label-font4" id="labelFont4" text="This is font4 - Roboto-Regular ZoopaChat" top="0" width="Ti.UI.FILL" xheight="Ti.UI.SIZE" />
+	        <Label class="label-font2" id="labelFont2" text="This is font2 - Fallback ZoopaChat" top="0" width="Ti.UI.FILL" xheight="Ti.UI.SIZE" />
+	        <Label class="label-font3" id="labelFont3" text="This is font3 - Verdana ZoopaChat" top="0" width="Ti.UI.FILL" xheight="Ti.UI.SIZE" />
+
+	        <Label class="debuglabel" id="configLabel" text="" top="0" width="Ti.UI.FILL" xheight="Ti.UI.SIZE" />
+	      </ScrollView>
+      </View>
+
+      <View id="logView" zIndex="9" visible="false" top="0" bottom="0" left="0" backgroundColor="white">
+	      <ScrollView class="debugscrollview" top="0" height="Ti.UI.FILL">
+	        <Label class="debuglabel" id="logLabel" text="" top="0" width="Ti.UI.FILL" xheight="Ti.UI.SIZE" onClick="doRefresh"/>
+	      </ScrollView>
+      </View>
+
+      <View id="backgroundView" zIndex="10" visible="false" top="0" bottom="0" left="0" backgroundColor="white">
+	      <ScrollView class="debugscrollview" top="0" height="Ti.UI.FILL">
+	        <Label class="debuglabel" id="backgroundLabel" text="" top="0" width="Ti.UI.FILL" xheight="Ti.UI.SIZE" onClick="doRefresh"/>
+	      </ScrollView>
+      </View>
+
+      <View id="platformView" zIndex="11" visible="false" top="0" bottom="0" left="0" backgroundColor="white">
+	      <ScrollView class="debugscrollview" top="0" height="Ti.UI.FILL">
+	        <Label class="debuglabel" id="platformLabel" text="" top="0" width="Ti.UI.FILL" xheight="Ti.UI.SIZE" onClick="doRefresh"/>
+	      </ScrollView>
+      </View>
+
+      <View id="sipView" zIndex="12" visible="false" top="0" bottom="0" left="0" backgroundColor="white">
+      </View>
+
+      <View id="testView" zIndex="14" visible="false" top="0" bottom="0" left="0" backgroundColor="white">
+      </View>
+    </View>
+    </View>
+  </View>
+</Alloy>

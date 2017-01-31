@@ -1,0 +1,12 @@
+<Alloy>
+	  <View id="mainview" class="feet-view-main" >
+    <Require src="NavBar" type="view" id="navbar" title="L('menu-log', 'Log')"/>
+	  <View id="notificationview" class="feet-view-inner" >
+	    <Require src="NotificationBar" type="view" top="0" left="0" right="0" height="0" visible="false"/>
+			<TextArea id="log" class="feet-label-log" height="Titanium.UI.FILL" />
+      <!--ScrollView top="0" height="Ti.UI.FILL">
+	      <Label class="feet-label-log" id="backgroundLabel" text="" top="0" width="Ti.UI.FILL" xheight="Ti.UI.SIZE" onClick="doRefresh"/>
+	    </ScrollView-->
+		</View>
+   </View>
+</Alloy>

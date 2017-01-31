@@ -1,0 +1,2482 @@
+'Window' : {
+	backgroundColor: '#fff',
+	top: 0, // Assume iOS 7+. Except a window in a Tab will then be moved down by 20
+	orientationModes: [Ti.UI.PORTRAIT,Ti.UI.UPSIDE_PORTRAIT],
+}
+
+"Window[platform=ios]": {
+	navBarHidden: false,
+	statusBarStyle: Ti.UI.iPhone.StatusBar.LIGHT_CONTENT,
+},
+"Window[platform=android]": {
+	windowSoftInputMode: Ti.UI.Android.SOFT_INPUT_ADJUST_PAN,
+	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS,
+	navBarHidden: true,
+	theme: 'Theme.Feet',
+	top: 0,
+	backgroundColor: 'red',
+}
+".naviconbutton":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+	width: 40,
+	height: 40,
+	tintColor: 'white',
+	color: 'white', 
+	backgroundColor: 'transparent',
+	borderColor: 'white',
+	borderWidth: 0,
+	selectedColor: 'red', 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+}
+".zoombutton":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+	width: 60,
+	height: 35,
+	tintColor: 'blue',
+	color: 'black', 
+	backgroundColor: 'white',
+	borderColor: 'black',
+	borderWidth: 1,
+	selectedColor: 'red', 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  opacity: 0.70,
+}
+".volumebutton":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+	width: 30,
+	height: 20,
+	tintColor: 'black',
+	color: 'black', 
+	backgroundColor: '#c0c0c0',
+	borderColor: 'white',
+	borderWidth: 1,
+	selectedColor: 'red', 
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+}
+
+".settingslineview":{
+					   top: 20,
+					   height: 36,
+					   left: 10,
+					   right: 10,
+					   backgroundColor: 'transparent',
+				   },
+".settingslabel":{
+font: {
+	fontFamily: "Verdana",
+	fontSize: 16,
+	fontWeight: "normal"
+},
+textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+//verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+  left: 10,
+color: '#c0c0c0',
+},
+".settingslabelsmall":{
+font: {
+	fontFamily: "Verdana",
+	fontSize: 14,
+	fontWeight: "normal"
+},
+textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+left: 10,
+color: '#c0c0c0',
+wordWrap: true
+},
+".settingsinput":{
+font: {
+	fontFamily: "Verdana",
+	fontSize: 15,
+	fontWeight: "normal"
+},
+textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
+left:120,
+right: 5,
+//verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+  tintColor: 'white',
+color: '#40c1ff',
+},
+".visitlabel":{
+color : '#b29600',
+left  : 0,
+right : 0,
+textAlign : Ti.UI.TEXT_ALIGNMENT_CENTER,
+font : {
+	fontSize : 13,
+	fontWeight: 'bold'
+}
+},
+
+'NavigationWindow': {
+	swipeBack: false
+}
+
+"TabGroup": {
+	tabsBackgroundColor: "white",
+
+	// Color of active tab icon/title
+	tabsTintColor: Alloy.CFG.brandPrimary
+}
+
+'Label[platform=android,windows]' : {
+	//color: '#000'
+}
+
+"List":{
+	backgroundColor: 'transparent',
+	separatorColor: Alloy.CFG.separatorColor,
+	showVerticalScrollIndicator: false,
+	backgroundColor: Alloy.CFG.backgroundColorDark,
+},
+
+"List[platform=ios]":{
+	separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.SINGLE_LINE,
+	selectionStyle: Ti.UI.iPhone.ListViewCellSelectionStyle.NONE,
+}
+
+"ItemTemplate":{
+	backgroundColor: "transparent",
+	accessoryType:Ti.UI.LIST_ACCESSORY_TYPE_NONE,
+}
+
+"ItemTemplate[platform=ios]":{
+	selectionStyle: Ti.UI.iPhone.ListViewCellSelectionStyle.NONE,
+}
+
+'ListItem' : {
+	color: Alloy.CFG.titleColorLight,
+	font: Alloy.CFG.titleFont,
+}
+
+'ListItem[platform=ios]' : {
+	backgroundColor: Alloy.CFG.backgroundColorDark,
+}
+
+"Tab[platform=android]": {
+	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS
+}
+
+"ScrollView": {
+	contentWidth: Ti.UI.FILL,
+	contentHeight: Ti.UI.SIZE,
+	scrollType: 'vertical'
+}
+
+
+"View[platform=android]": {
+	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS
+},
+
+"#drawer[platform=android]": {
+	top: 0,
+	bottom: 0,
+	fullscreen: false,
+	animationMode: "ANIMATION_NONE",
+	backgroundColor: Alloy.CFG.backgroundColorDark,
+	closeDrawerGestureMode: "CLOSE_MODE_MARGIN",
+	openDrawerGestureMode: "OPEN_MODE_ALL",
+	orientationModes: [Ti.UI.PORTRAIT,Ti.UI.UPSIDE_PORTRAIT],
+	shadowWidth: "40dp",
+	showShadow: false,
+	navBarHidden: true,
+	theme: 'Theme.Feet', //'Theme.Feet',
+},
+"#drawer[platform=ios]": {
+	top: 20,
+	bottom: 0,
+	backgroundColor: Alloy.CFG.backgroundColorDark,
+	openDrawerGestureMode: "OPEN_MODE_NONE",
+	closeDrawerGestureMode: "CLOSE_MODE_BEZEL_PANNING_CENTERWINDOW",
+	orientationModes: [Titanium.UI.PORTRAIT],
+	centerHiddenInteractionMode: "OPEN_CENTER_MODE_NAVBAR",
+	animationMode: "ANIMATION_ZOOM",
+	showShadow: true,
+	statusBarStyle: Ti.UI.iPhone.StatusBar.LIGHT_CONTENT
+}
+
+'.vbox': {
+	layout: 'vertical',
+	top: 20,
+	right: 20,
+	bottom: 20,
+	left: 20,
+
+	height: Ti.UI.FILL
+}
+
+/** Loading activity indicator for iOS **/
+".loadingOuter[platform=ios]": {
+	top: "20%",
+	left: "5%",
+	right: "5%",
+  height: '70dp',
+  borderRadius: 10,
+  backgroundColor: "#91979a"
+}
+
+".loadingInner[platform=ios]": {
+  top: '10dp',
+  right: '10dp',
+  bottom: '10dp',
+  left: '10dp',
+
+  width: undefined,
+  height: undefined,
+
+  layout: 'absolute',
+  opacity: 1.0,
+  backgroundColor: 'transparent',
+}
+
+".loadingIndicator[platform=ios]": {
+	left: '10dp',
+	top: '0dp',
+	width: '60dp',
+  style: Ti.UI.ActivityIndicatorStyle.BIG
+}
+
+
+".loadingMessage[platform=ios]": {
+  top: '0dp',
+  left: '80dp',
+  width: Ti.UI.FILL,
+  height: Ti.UI.FILL,
+  text: L('loadingMessage', 'Loading..'),
+
+  backgroundColor: 'transparent',
+  color: 'white',
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+  font: {
+    fontSize: '16dp'
+  },
+  wordWrap: true,
+  zIndex: 12
+}
+
+".interstitialActivityIndicator[platform=android]": {
+  style: Ti.UI.ActivityIndicatorStyle.DARK,
+  backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+  height: Titanium.UI.SIZE,
+}
+
+".interstitialActivityIndicator[platform=ios]": {
+  style: Ti.UI.ActivityIndicatorStyle.DARK,
+  backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+  height: Titanium.UI.SIZE,
+}
+
+".interstitial-loading-label": {
+	paddingTop: 20,
+	paddingBottom: 20,
+	left: 10,
+	right: 10,
+  textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.CFG.Skin.lightTextColor,
+  //opacity: 0.6,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'16dp',
+		fontWeight:'bold'
+	}
+}
+
+/** Zoopa'ed **/
+"TableView":{
+//  font: Alloy.CFG.Skin.font,
+//  color: Alloy.CFG.Skin.color,
+  separatorColor: 'transparent',
+  borderRadius: 0,
+  backgroundColor: 'white',
+  backgroundRepeat: false,
+}
+"TableViewRow":{
+  // BackgroundGradient will show through if tableViewRow backgroundColor/FocusedColor are set to transparent,
+  // however this causes problems with filtered tables
+	height:Ti.UI.SIZE,
+//  font: Alloy.CFG.Skin.font,
+//  color: Alloy.CFG.Skin.defaultTextColor,
+  borderRadius: 0,
+//	backgroundColor: 'white',
+  backgroundFocusedColor: 'white',  // I THINK this is what allows the search results to display correctly (non-white background)
+}
+
+"TableView[platform=ios]":{
+	separatorStyle: Ti.UI.iPhone.TableViewSeparatorStyle.NONE
+}
+
+"TableViewRow[platform=ios]":{
+	selectionStyle: Titanium.UI.iOS.TableViewCellSelectionStyle.NONE
+}
+
+/** Not zoopa'ed **/
+"TextField":{
+  // height: Alloy.CFG.textFieldHeight, // JMH debugging appearance issues. Something happens in Zoopa to offset top+bottom which does not happen in a blank project
+  paddingLeft: 5,
+  paddingRight: 5,
+  borderRadius: 0,
+  borderWidth: 0,
+  borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+},
+"TextArea":{
+  height: 100,
+  textArea: true,
+  scrollable: true,      // needs to be false to scroll the underlying view back down by finger
+  fillarea: false,       // fill available area above keyboard when activated (messageCompose)
+  editable: true,
+  suppressReturn: false, // note this gets set to false on a FormTextArea
+  //borderColor: Alloy.CFG.lightBlue, // Skin._tableViewRowDropdownColor,
+  borderWidth: 1,
+  backgroundColor: '#dddddd',
+  controlType: 'TextArea',
+  textAlign: 'left',
+  borderRadius: 0,
+},
+'TextField[platform=android]' : {
+	height: Ti.UI.SIZE,
+	hintTextColor: '#E1E1E1',
+}
+"TextArea[platform=android]":{
+	hintTextColor: '#E1E1E1',
+}
+
+"ActivityIndicator":{
+	height:Ti.UI.FILL,
+	width:Ti.UI.FILL,
+	backgroundColor:'#d999',
+	color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontFamily,
+		fontSize:'12dp',
+		fontWeight:'bold'
+	},
+	zIndex:999,
+ 	style:Ti.UI.ActivityIndicatorStyle.DARK
+}
+
+"Picker[platform=android]":{
+	left:'10dp',
+	right:'10dp'
+}
+
+"Button":{
+	backgroundColor: "transparent",
+	tintColor: "white",
+	borderRadius: 2,
+	borderWidth: 0,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+}
+
+
+/********* STYLES ******************/
+/**********************************************************************************************************************************/
+/**********************************************************************************************************************************/
+
+// OVERRIDE ALERT DIALOG WINDOW
+"#alert": {
+	backgroundColor: "transparent",
+	backgroundImage: "null",
+	opacity: 1.0,
+	navBarHidden: false,
+	modal: true,
+}
+
+".feet-view-main": {
+	// Inclusive navbar
+	backgroundColor: Alloy.CFG.backgroundColorDark,
+	color: Alloy.CFG.titleColorLight,
+	borderRadius: 0,
+	layout: 'absolute',
+}
+
+".feet-view-inner": {
+	// Below navbar
+	top: 60,
+	layout:"vertical",
+	backgroundColor: "transparent",
+	borderRadius: 0,
+	height: Titanium.UI.FILL,
+	//scrollingEnabled: false,
+}
+
+
+".feet-list-blue": {
+	backgroundColor: Alloy.CFG.backgroundColorBlue,
+	color: Alloy.CFG.titleColorLight,
+}
+
+".feet-list-dark": {
+	backgroundColor: Alloy.CFG.backgroundColorDark,
+	color: Alloy.CFG.titleColorLight,
+}
+
+".feet-navbar-titlelabel":{
+  top: 0,
+  left: 50,
+  right: 50,
+  height: 60,
+  font: Alloy.CFG.navbarFont,
+  // font: {
+  	// fontFamily: Alloy.Globals.FontAwesome,
+  	// fontSize: "28dp"
+  // },
+  color: Alloy.CFG.titleColorLight,
+	wordWrap: true,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+},
+
+
+".feet-textfield": {
+	font: Alloy.CFG.inputFont,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	color: Alloy.CFG.textColorLight,
+	hintTextColor: Alloy.CFG.hintTextColorLight,
+}
+
+".feet-textfield[platform=ios]":{
+	height: Ti.UI.SIZE,
+	//borderColor: Alloy.CFG.textColorLight,
+	//hintTextColor: Alloy.CFG.hintTextColorLight,
+}
+
+".feet-keypad-textfield":{
+	height: '105dp',
+	color: Alloy.CFG.titleColorLight,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamily,
+		fontSize: 30,
+		fontWeight: 'normal'
+	},
+	keyboardType: Titanium.UI.KEYBOARD_PHONE_PAD,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+	borderWidth: 1,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".feet-keypad-textfield[platform=android]":{
+	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+}
+
+// Popout for picker
+'.tpad-s': {
+	top: 10
+}
+
+".lrpad": {
+	left: 60,
+	right: 60,
+}
+
+".feet-search":{
+	backgroundColor: Alloy.CFG.backgroundColorBlue,
+	borderWidth:0,
+	borderColor:"transparent",
+	tintColor: "#C41230",
+	hintText: "Search",
+	barColor: Alloy.CFG.backgroundColorBlue,
+	color: Alloy.CFG.titleColorLight,
+	showBookmark:false
+}
+
+".search":{
+	backgroundColor: "#fff",
+	borderWidth:0,
+	borderColor:"#fff",
+	tintColor: "#C41230",
+	hintText: "Search",
+	barColor: "#fff",
+	showBookmark:false
+}
+
+"#searchBar[platform=android,windows]":{
+	height: 40,
+	left: 10,
+	width: "76%"
+},
+
+".feet-button-rounded": {
+	borderWidth: 0,
+	top: 1, // So the "rounded top" looks correct
+	width: "42%",
+	height: 50,
+	borderRadius: 25,
+ 	color: Alloy.CFG.textColorLight,
+ 	backgroundColor: Alloy.CFG.buttonColorGreen,
+	font: {
+		fontFamily: Alloy.CFG.fontFamily,
+		fontSize: 16,
+  },
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".feet-button-app": {
+	left: 5,
+	right: 5,
+	top: 4, // So the "rounded top" looks correct
+	borderRadius: 15, //Alloy.CFG.buttonBorderRadius,
+	height: 30,
+  width: "45%",
+	borderWidth: 2,
+	borderColor: Alloy.CFG.textColorLight,,
+ 	color: Alloy.CFG.textColorLight,
+ 	backgroundColor: Alloy.CFG.backgroundColorBlue,
+	font: Alloy.CFG.detailFont,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".feet-button-connect": {
+	title: L('button-connect', 'CONNECT'),
+ 	color: Alloy.CFG.textColorLight,
+  backgroundColor: 'transparent',
+  borderColor: Alloy.CFG.textColorLight,
+  borderWidth: 2,
+  borderRadius: 6,
+  height: 36,
+  right: 0,
+  width: 110,
+}
+
+".feet-button-connected": {
+	title: L('button-connected', 'CONNECTED'),
+ 	color: Alloy.CFG.textColorLight,
+  backgroundColor: Alloy.CFG.buttonColorGreen,
+  borderColor: 'transparent',
+  borderWidth: 2,
+  borderRadius: 6,
+  height: 36,
+  right: 0,
+  width: 110,
+}
+
+".feet-button-next": {
+	font: Alloy.CFG.iconButtonFont,
+	top: null,
+	bottom: 0,
+	width: Ti.UI.FILL,
+	title: "\uf178",
+ 	color: Alloy.CFG.textColorLight,
+  backgroundColor: Alloy.CFG.buttonColorGreen,
+  borderColor: 'transparent',
+  borderWidth: 0,
+  borderRadius: 0,
+  height: Alloy.CFG.selectrowHeight,
+}
+
+".feet-button-logout": {
+	font: {
+    "fontFamily": "FontAwesome",
+    "fontSize": "16dp",
+    "fontWeight": "normal"
+  },
+	top: null,
+	bottom: 0,
+	width: Ti.UI.FILL,
+ 	color: Alloy.CFG.titleColorLight,
+  textAlign: 'left',
+  backgroundColor: 'transparent',
+  borderColor: 'transparent',
+  borderWidth: 0,
+  borderRadius: 0,
+  height: Alloy.CFG.selectrowHeight,
+}
+
+".feet-label": {
+	font: Alloy.CFG.infoFont,
+ 	color: Alloy.CFG.textColorLight,
+ 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".feet-label-log":{
+ 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	font: {
+		fontFamily: 'Courier New',
+		fontSize: 11,
+	},
+	editable: false,
+	backgroundColor: Alloy.CFG.backgroundColorLight,
+    color: Alloy.CFG.textColorDark,
+	width: Ti.UI.FILL,
+}
+
+".feet-fa-icon": {
+	// subitems don't work for getting into "widget" properties
+	top: 6,
+	iconSize: 36,
+ 	color: Alloy.CFG.textColorLight,
+	iconColor: 'orange',
+ 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+}
+
+".feet-fa-icon-blue":{
+	left:0,
+	size:16,
+	iconColor:'white',
+	iconBackgroundColor: '#0076b6',
+	iOSHeight: Alloy.CFG.selectrowHeight,
+    width: 24,
+    height: 24,
+	borderRadius: "12",
+}
+
+".feet-menurow":{
+	iconSize: 16,
+	iconColor:'white',
+ 	color: Alloy.CFG.textColorLight,
+ 	titleColor: Alloy.CFG.textColorLight,
+  backgroundColor: Alloy.CFG.backgroundColorDark,
+}
+
+".feet-selectrow":{
+	iconSize: 16,
+	iconColor:'white',
+ 	color: Alloy.CFG.titleColorLight,
+  backgroundColor: Alloy.CFG.backgroundColorDark,
+}
+
+".feet-selectrow[platform=ios]":{
+	height: Alloy.CFG.selectrowHeight,
+	iOSHeight: Alloy.CFG.selectrowHeight, // used on iOS IFF a subtitle is shown
+}
+
+".feet-selectrow-blueicon":{
+	iconBackgroundColor: Alloy.CFG.buttonColorBlue,
+	iconBackgroundSize: 30,
+}
+
+".feet-selectrow-all":{
+	xiconBackgroundColor: Alloy.CFG.buttonColorGreen,
+	xiconBackgroundSize: 30,
+	xicon: "fa-check",
+  title: L("text-selectall", "SELECT ALL"),
+}
+
+".feet-fa-icon-toggle":{
+	left: null,
+	right: 12,
+	size:16,
+	iconColor:'white'
+}
+
+".feet-fa-icon-toggle-left":{
+	left: 0,
+	right: null,
+	size:16,
+	iconColor:'white'
+}
+
+".feet-fa-icon-listheader":{
+	left: null,
+	right: 0,
+	top: 0,
+	size: 20,
+	iconColor:'white',
+	iconSize: 20,
+	iconBackgroundSize: 22,
+	iconBackgroundColor: 'transparent',
+}
+
+
+".feet-initialslabel":{
+	left: null,
+	height: 50,
+	width: 50,
+	borderRadius: 25,
+
+	color: Alloy.CFG.textColorLight,
+	backgroundColor: "#2d74b5",
+  wordWrap: false,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+
+  font: {
+  	fontFamily: Alloy.CFG.fontFamily,
+  	fontSize: "24dp",
+  }
+}
+
+".feet-contact-image":{
+	borderWidth: 1,
+	borderColor: "#acacac",
+	preventDefaultImage: false,
+	defaultImage: "/images/avatar_placeholder.png",
+	width: 50,
+	height: 50,
+	borderRadius: 25
+},
+
+".feet-contact-image-smoothborder-android": {
+	borderWidth: 1.5,
+	borderColor: "#acacac",
+	height: 50,
+	width: 50,
+	borderRadius: 25,
+	opacity: 0.6
+}
+
+".feet-list-titlelabel":{
+	color: Alloy.CFG.titleColorLight,
+	font: Alloy.CFG.titleFont,
+	width: null,
+	wordWrap: false,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM
+},
+
+".feet-list-subtitlelabel":{
+	color: Alloy.CFG.subtitleColorLight,
+	font: Alloy.CFG.subtitleFont,
+	wordWrap: true,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP
+}
+
+".feet-list-historylabel":{
+	color: Alloy.CFG.subtitleColorLight,
+	font: Alloy.CFG.detailFont,
+	wordWrap: false,
+	left: 0,
+	right: 0,
+	height: 22,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP
+}
+
+".feet-list-debuglabel":{
+	color: "#EBEBEB"
+}
+
+".feet-list-debuglabel[if=Alloy.Globals.lib.isweeklyrelease]":{
+	color: "transparent",
+}
+
+".feet-list-debuglabel[if=Alloy.Globals.lib.isdebugmode]":{
+	//color: "#EBEBEB",
+	color: "gray",
+}
+
+".feet-label-tag":{
+	color: Alloy.CFG.subtitleColorLight,
+	font: Alloy.CFG.detailFont,
+	wordWrap: true,
+	width: "45%",
+	height: 22,
+	top: 4,
+	left: 2,
+	right: 2,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP
+}
+
+
+".feet-list-fa-buttonview":{
+	// Exist solely for the purpose of being a "click target" as buttons won't fire without the click event
+	left: null,
+	width: 50,
+	height: 50,
+	borderRadius: 4,
+	font: Alloy.CFG.iconButtonFont,
+	color: Alloy.CFG.titleColorLight,
+	backgroundColor: 'transparent',
+	text: '\uf095',
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+}
+
+".list-icon-detailsubtitlelabel":{
+	color: Alloy.CFG.Skin.lightTextColor,
+  font:{
+   fontFamily: Alloy.Globals.FontAwesome,
+   fontSize: 13,
+   fontWeight: 'bold',
+  },
+	wordWrap: true,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+},
+
+".list-titlelabeladditem":{
+	color: Alloy.CFG.Skin.textColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 20,
+		fontWeight: 'normal'
+	},
+	width: null,
+	wordWrap: false,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM
+},
+
+
+
+
+
+".signup-textcontainer":{
+	// Exist solely for the purpose of being a "click target" as buttons won't fire without the click event
+	left: 10,
+	right: 10,
+	top: 20,
+	height: Alloy.CFG.textHeight,
+  borderRadius: Alloy.CFG.Skin.textBorderRadius,
+  borderWidth: 1,
+  borderColor: 'lightgray',
+  backgroundColor: 'white',
+}
+
+".signup-buttonview":{
+	// Exist solely for the purpose of being a "click target" as buttons won't fire without the click event
+	left: 0,
+  width: "14%",
+	height: Alloy.CFG.textHeight,
+  borderRadius: Alloy.CFG.Skin.textBorderRadius,
+  borderWidth: 1,
+  borderColor: 'lightgray',
+	backgroundColor: 'white',
+}
+
+".signup-rightbuttonview":{
+	// Exist solely for the purpose of being a "click target" as buttons won't fire without the click event
+	left: 0,
+	width: Titanium.UI.FILL,
+	zIndex: 1,
+	height: Alloy.CFG.textHeight,
+  borderRadius: Alloy.CFG.Skin.textBorderRadius,
+  borderWidth: 0,
+  borderColor: 'lightgray',
+	backgroundColor: 'white',
+}
+
+".signup-rightbuttonimage":{
+	// Exist solely for the purpose of being a "click target" as buttons won't fire without the click event
+	left: null,
+	right: 10,
+	bottom: null,
+	top: 10,
+	width: 20,
+	height: 20,
+}
+
+".signup-buttonimage":{
+	// Exist solely for the purpose of being a "click target" as buttons won't fire without the click event
+	left: 3,
+	right: 3,
+	bottom: 3,
+	top: 3,
+	width: null,
+	height: null,
+}
+
+".signup-flagimage":{
+	// Exist solely for the purpose of being a "click target" as buttons won't fire without the click event
+	left: 4,
+	right: 4,
+	top: 10,
+	width: null,
+	height: 21,
+}
+
+".signup-text": {
+  left: 0,
+  zIndex: 1,
+  right: null,
+  width: "74%",
+	height: Alloy.CFG.textHeight,
+	backgroundColor: 'white',
+ 	color: Alloy.CFG.Skin.textColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'18dp',
+		fontWeight:'normal'
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+  borderRadius: Alloy.CFG.Skin.textBorderRadius,
+  borderWidth: 0,
+  borderColor: 'transparent',
+}
+
+".search-text": {
+  color: "#616161",
+  backgroundColor: "white",
+  autocorrect: false,
+  maxLength: 20,
+  hintText: L('hint-searchglass', '\uf002  Search'),
+ 	borderRadius: 4,
+  returnKeyType: Ti.UI.RETURNKEY_SEARCH,
+  keyboardType: Ti.UI.KEYBOARD_NAMEPHONE_PAD,
+ 	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM,
+  autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+	font:{
+    fontFamily: Alloy.Globals.FontAwesome,
+		fontSize: '17dp',
+		fontWeight: 'normal',
+	},
+}
+
+".menuheaderuserlabel":{
+	color: Alloy.CFG.Skin.inverseTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'21dp',
+		fontWeight:'bold'
+	},
+  top: 0,
+  height: 55,
+  verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	wordWrap: true,
+}
+
+".menuheadercreditlabel":{
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'14dp',
+		fontWeight:'bold'
+	},
+	color: Alloy.CFG.Skin.lightTextColor
+	//opacity: "0.5"
+}
+
+".menutitlelabel":{
+	color: Alloy.CFG.Skin.inverseTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'16dp',
+		fontWeight:'normal'
+	}
+}
+
+".menusubtitlelabel":{
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'12dp',
+		fontWeight:'normal'
+	},
+	color: Alloy.CFG.Skin.inverseFadedTextColor,
+	//opacity: "0.8"
+}
+
+".menufreecreditlabel":{
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'15dp',
+		fontWeight:'normal'
+	},
+	color: Alloy.CFG.Skin.zOrangeColor,
+},
+".menuicon[platform=ios]":{
+  left: 20,
+	top: 3,
+	preventDefaultImage: true,
+},
+".menuicon[platform=android]":{
+	left: null,
+	right: null,
+	center: {x: 30, y: 13},
+	height: 24,
+	width: 20,
+	preventDefaultImage: true,
+},
+
+".menucountlabel": {
+	backgroundColor: "#363636",
+	color: Alloy.CFG.Skin.extraLightTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'12dp',
+		fontWeight:'normal'
+	},
+	borderRadius: 10,
+	height: 20,
+	width: 30,
+	//backgroundColor: "red",
+	visible: "false",
+	right: 35,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".navbar":{
+  top: 0,
+  left: 0,
+  right: 0,
+  height: 60,
+}
+
+".darkbackground": {
+	backgroundColor: Alloy.CFG.backgroundColorDark,
+	color: Alloy.CFG.titleColorLight,
+}
+
+".navbar-titlelabel":{
+  top: 0,
+  left: 100,
+  right: 100,
+  height: 60,
+  font: Alloy.CFG.navbarFont,
+  color: Alloy.CFG.titleColorLight,
+	wordWrap: true,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+},
+
+".navbar-uxbutton":{
+	iconColor: 'white',
+	size: 18,
+	top: 10,
+	width: 40,
+	height: 40,
+}
+
+".navbar-uxrecordbutton":{
+	iconColor: 'white',
+	top: 14,
+	width: 32,
+	height: 21,
+}
+
+".navbar-iconbutton":{
+	top: 5,
+	width: 46,
+	height: 46,
+}
+
+".share-uxbutton[platform=ios]":{
+	size: 32,
+	top: 2,
+	width: 40,
+	height: 40,
+}
+
+".share-uxbutton[platform=android]":{
+	size: 25,
+	top: 2,
+	width: 42,
+	height: 42,
+}
+
+".share-savedrecordingbadge":{
+	preventDefaultImage: true,
+  zIndex:999,
+  left: null,
+  right:"9%",
+  top:9,
+	width: 28,
+	height: 28,
+}
+
+".list":{
+	separatorColor: Alloy.CFG.Skin.lightTextColor,
+	showVerticalScrollIndicator: false,
+},
+
+".list[platform=ios]":{
+	separatorStyle: Ti.UI.iPhone.ListViewSeparatorStyle.SINGLE_LINE,
+	selectionStyle: Ti.UI.iPhone.ListViewCellSelectionStyle.NONE,
+}
+
+".listitemtemplate":{
+	backgroundColor: "transparent",
+	accessoryType:Ti.UI.LIST_ACCESSORY_TYPE_NONE,
+}
+
+".listitemtemplate[platform=ios]":{
+	selectionStyle: Ti.UI.iPhone.ListViewCellSelectionStyle.NONE,
+}
+
+".contact-image":{
+	preventDefaultImage: false,
+	defaultImage: "/images/avatar_placeholder.png",
+	width: 50,
+	height: 50,
+	borderRadius: 4
+},
+
+".contact-image4way":{
+	preventDefaultImage: false,
+	defaultImage: "/images/avatar_placeholder.png",
+	width: 24,
+	height: 24,
+	borderRadius: 2
+},
+
+".contact-imageplus":{
+	preventDefaultImage: false,
+	defaultImage: "/images/avatar_placeholder.png",
+	width: 32,
+	height: 32,
+	borderRadius: 4
+},
+
+".contact-zbadge":{
+	preventDefaultImage: true,
+	image: "/images/zbadge.png",
+	zIndex: 9,
+	width: 15,
+	height: 15,
+	borderRadius: 0,
+	visible: false,
+},
+
+".detail-titlelabel":{
+	color: Alloy.CFG.Skin.textColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 22,
+		fontWeight: 'bold'
+	},
+	wordWrap: true,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM
+}
+
+".list-detailphonelabel":{
+	color: Alloy.CFG.Skin.textColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 18,
+		fontWeight: 'bold'
+	},
+	wordWrap: false,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM
+},
+
+".list-detailphonelabel[platform=ios]":{
+	color: Alloy.CFG.Skin.textColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 16,
+		fontWeight: 'bold'
+	},
+	wordWrap: false,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM
+},
+
+".list-detailsubtitlelabel":{
+	color: Alloy.CFG.Skin.lightTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 13,
+		fontWeight: 'bold'
+	},
+	wordWrap: true,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+},
+
+".list-icon-detailsubtitlelabel":{
+	color: Alloy.CFG.Skin.lightTextColor,
+  font:{
+   fontFamily: Alloy.Globals.FontAwesome,
+   fontSize: 13,
+   fontWeight: 'bold',
+  },
+	//font:{
+	//	fontFamily: Alloy.CFG.Skin.fontFamly,
+	//	fontSize: 13,
+	//	fontWeight: 'bold'
+	//},
+	wordWrap: true,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+},
+
+".list-titlelabeladditem":{
+	color: Alloy.CFG.Skin.textColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 20,
+		fontWeight: 'normal'
+	},
+	width: null,
+	wordWrap: false,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM
+},
+
+".list-titlelabel":{
+	color: Alloy.CFG.Skin.textColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 17,
+		fontWeight: 'normal'
+	},
+	width: null,
+	wordWrap: false,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM
+},
+
+".list-subtitlelabel":{
+	color: Alloy.CFG.Skin.lightTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 12,
+		fontWeight: 'normal'
+	},
+	wordWrap: true,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+}
+
+".list-debuglabel":{
+	color: "#EBEBEB"
+}
+
+".list-debuglabel[if=Alloy.Globals.lib.isweeklyrelease]":{
+	color: "transparent",
+}
+
+".list-debuglabel[if=Alloy.Globals.lib.isdebugmode]":{
+	//color: "#EBEBEB",
+	color: "gray",
+}
+
+
+".list-ratelabel":{
+	color: Alloy.CFG.Skin.lightTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 12,
+		fontWeight: 'normal'
+	},
+	wordWrap: false,
+	left: null,
+	right: 0,
+	width: 60,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+}
+
+".list-ratelabel-small":{
+	color: Alloy.CFG.Skin.lightTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 11,
+		fontWeight: 'normal'
+	},
+	wordWrap: false,
+	left: null,
+	right: 0,
+	width: 60,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
+}
+
+".list-calldirectionimage": {
+	top: 6,
+	width: 22,
+	height: 22,
+}
+
+".list-buttonview":{
+	// Exist solely for the purpose of being a "click target" as buttons won't fire without the click event
+	left: null,
+	width: 40,
+	height: 40,
+	borderRadius: 4,
+},
+
+".list-smallbuttonview":{
+	// Exist solely for the purpose of being a "click target" as buttons won't fire without the click event
+	left: null,
+	width: 22,
+	height: 22,
+	borderRadius: 4,
+},
+
+".list-button":{
+	width: 40,
+	height: 40,
+	borderRadius: 4
+},
+
+".tabbar":{
+  left: 0,
+  right: 0,
+  height: 60,
+	color: "white",
+	backgroundColor: Alloy.CFG.Skin.zBlueColor
+},
+
+".tabbar-button":{
+	top: 10,
+	width: 30,
+	height: 30,
+},
+
+
+".group-nametextfield":{
+	color: Alloy.CFG.Skin.textColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize: 22,
+		fontWeight: 'bold'
+	},
+	wordWrap: true,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+	borderWidth: 0,
+  backgroundColor: 'transparent',
+  suppressReturn: true,
+  enableReturnKey: false,
+}
+
+
+// For popup-dialogs
+".view-popup": {
+  backgroundColor:"transparent",
+  left:"20",
+  right:"20",
+  borderWidth: 0,
+  height:"Ti.UI.SIZE",
+}
+
+".pin-view": {
+  backgroundColor: Alloy.CFG.Skin.zLightBlueColor
+}
+
+".pincountdown-view": {
+
+}
+
+".pincountdown-circle": {
+	width: 110,
+	height: 110,
+	borderRadius: 55,
+	borderWidth: 0,
+	borderColor: 'blue',
+	backgroundColor: Alloy.CFG.Skin.zBlueColor,
+}
+
+".pincountdown-label": {
+	width: 110,
+	height: 110,
+  backgroundColor: 'transparent',
+  textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+  zIndex: 9,
+ 	color: Alloy.CFG.Skin.inverseTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'48dp',
+		fontWeight:'normal'
+	}
+}
+
+".pinhint-label": {
+	left: 10,
+	right: 10,
+  textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.CFG.Skin.lightTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'12dp',
+		fontWeight:'bold'
+	}
+}
+
+// Keyboard pops over signup page since additoin of touchEnabled=false field countryText
+"#registerView[platform=android]": {
+	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS
+}
+
+"#registerScrollView[platform=android]": {
+	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS
+}
+
+"#numpad[platform=android]": {
+	softKeyboardOnFocus: Ti.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS
+}
+
+".registerstart-label": {
+	paddingTop: 10,
+	paddingBottom: 10,
+  backgroundColor: 'transparent',
+  textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM,
+ 	color: Alloy.CFG.Skin.zBlueColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'28dp',
+		fontWeight:'bold'
+	}
+}
+
+".registerhint-label": {
+	paddingTop: 20,
+	paddingBottom: 20,
+	left: 10,
+	right: 10,
+  textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.CFG.Skin.lightTextColor,
+  //opacity: 0.6,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'12dp',
+		fontWeight:'bold'
+	}
+}
+
+".registerhint-label-bold": {
+	paddingTop: 20,
+	paddingBottom: 20,
+	left: 10,
+	right: 10,
+  textAlign:Ti.UI.TEXT_ALIGNMENT_CENTER,
+  color: Alloy.CFG.Skin.lightTextColor,
+  //opacity: 0.85,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'13dp',
+		fontWeight:'bold'
+	}
+}
+
+".form-text": {
+  left: 10,
+  right: 10,
+	height: 40,
+	backgroundColor: 'white',
+ 	color: Alloy.CFG.Skin.textColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'18dp',
+		fontWeight:'bold'
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+  borderRadius: 2,
+  borderWidth: 1,
+  borderColor: 'lightgray',
+}
+
+"#XXphoneText": {
+	keyboardType: Ti.UI.KEYBOARD_NUMBER_PAD,
+	returnKeyType: Ti.UI.RETURNKEY_NEXT,
+}
+
+".pindigit-text": {
+	left: 6,
+	//right: 6,
+	paddingLeft: 2,
+	paddingRight: 2,
+	clearOnEdit: true,
+	maxLength: 1,
+	width: 50,
+	height: Alloy.CFG.textHeight,
+	backgroundColor: 'white',
+ 	color: Alloy.CFG.Skin.textColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'21dp',
+		fontWeight:'normal'
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	keyboardType: Ti.UI.KEYBOARD_NUMBER_PAD,
+	//returnKeyType: Ti.UI.RETURNKEY_NEXT,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+  borderRadius: 2,
+  borderWidth: 1,
+  borderColor: 'lightgray',
+}
+
+".blue-view": {
+  backgroundColor: Alloy.CFG.Skin.zBlueColor
+}
+
+".call-debuglabel": {
+	width: Ti.UI.FILL,
+	borderWidth: 0,
+ 	color: Alloy.CFG.Skin.inverseLightTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'9',
+		fontWeight:'bold'
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	backgroundColor: "transparent"
+}
+
+".call-contactlabel": {
+	width: Ti.UI.FILL,
+	borderWidth: 0,
+ 	color: Alloy.CFG.Skin.inverseTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'32',
+		fontWeight:'normal'
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	backgroundColor: "transparent"
+}
+
+".call-subtitle": {
+	width: Ti.UI.FILL,
+	borderWidth: 0,
+ 	color: Alloy.CFG.Skin.inverseTextColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'16',
+		fontWeight:'normal'
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	backgroundColor: "transparent"
+}
+
+".blue-button": {
+	left: 10,
+	right: 10,
+	borderWidth: 0,
+	borderRadius: 2,
+	height: 46,
+ 	color: Alloy.CFG.Skin.inverseTextColor,
+ 	backgroundColor: Alloy.CFG.Skin.zBlueColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'16',
+		fontWeight:'bold'
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".blue-button-dialog": {
+	left: 10,
+	right: 10,
+	borderWidth: 0,
+	top: 1, // So the "rounded top" looks correct
+	borderRadius: Alloy.CFG.Skin.buttonBorderRadius,
+	height: 45,
+ 	color: Alloy.CFG.Skin.inverseTextColor,
+ 	backgroundColor: Alloy.CFG.Skin.zBlueColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'16',
+		fontWeight:'bold'
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".invite-button": {
+	borderWidth: 0,
+	borderRadius: 3,
+	height: 28,
+ 	color: Alloy.CFG.Skin.inverseTextColor,
+ 	backgroundColor: Alloy.CFG.Skin.zOrangeColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'14',
+		fontWeight:'normal'
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".blue-callconnectbutton": {
+	left: 10,
+	right: 10,
+	borderWidth: 0,
+	borderRadius: 2,
+	height: 50,
+ 	color: Alloy.CFG.Skin.inverseTextColor,
+ 	backgroundColor: Alloy.CFG.Skin.zBlueButtonColor,
+	font:{
+		fontFamily: Alloy.CFG.Skin.fontFamly,
+		fontSize:'16',
+		fontWeight:'bold'
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".bottombar-view": {
+  top: null,
+  bottom: 0,
+  height: 80,
+  width: Ti.UI.FILL,
+  backgroundColor: 'white',
+  borderColor: 'gray',
+  borderWidth: 1,
+  zIndex: 99,
+}
+
+".bottombar-inner-view": {
+  backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+}
+
+".callbar-buttonview": {
+	top: 2,
+}
+
+".callbar-recordbuttonview": {
+	top: 2,
+  left: null,
+  right: 30,
+  width: Ti.UI.SIZE,
+}
+
+/* Images on button layout (as image:)
+> iOS if width+height null, is in top/left of border
+> iOS if width+height specified, is centered but not stretched
+
+Images on button layout (as backgroundImage:)
+> iOS tintColor must be set for .png button image color - transparent makes it disappear
+> iOS color is not used for image, only font
+
+> DISABLED LOOK. Cannot set button.enabled = false because then you cannot click it... so opacity 0.5 makes look faded
+
+> if image dimensions are larger than button dimensions, IMAGE = tintColor eg. all white, so no button
+> therefore use image=null, backgroundImage=imageFile to fit
+
+> if image dimensions are smaller than button dimensions, backgroundImage STRETCHES to fit, so use image=imageFile, backgroundImage=null
+*/
+".callbar-iconbutton[platform=android]":{
+	top: 4,
+	left: 4,
+	width: null,
+	height: null,
+	right: 4,
+	bottom: 8,
+	tintColor: 'transparent',
+	borderRadius: 8,
+	//backgroundColor: "#60c91d",
+	backgroundImage: '/images/icon_callbar_call_selected.png',
+	// was #39aa19 invision #6fcf1a new #60c91d hsl hsl(93, 74.6835%, 46.4706%) hsla(93, 74.6835%, 46.4706%, 1.0000)
+},
+
+".callbar-iconbutton[platform=ios]":{
+	top: 5,
+	left: 3,
+	width: null,
+	height: null,
+	right: 3,
+	bottom: 10,
+	tintColor: 'transparent',
+	borderRadius: 8,
+	//backgroundColor: "#60c91d",
+	backgroundImage: '/images/icon_callbar_call_selected.png',
+},
+
+".callbar-image": {
+	top: 6,
+	height: 24,
+}
+
+".callbar-label": {
+	zIndex: 3,
+	top: 10,
+	font: Alloy.CFG.Skin.titleFont,
+	color: Alloy.CFG.Skin.fadedTextColor
+}
+
+".callbar-sublabel": {
+	zIndex: 3,
+	font: Alloy.CFG.Skin.subtitleFont,
+	color: Alloy.CFG.Skin.fadedTextColor
+}
+
+".callbar-backimage": {
+	top: 0,
+	height: 52,
+	preventDefaultImage: true,
+}
+
+".callbar-frontlabel": {
+	zIndex: 3,
+	top: 23,
+	font: Alloy.CFG.Skin.titleFont,
+	color: Alloy.CFG.Skin.fadedTextColor
+}
+
+".callbar-frontsublabel": {
+	zIndex: 3,
+	top: null,
+	bottom: 2,
+	font: Alloy.CFG.Skin.subtitleFont,
+	color: Alloy.CFG.Skin.fadedTextColor
+}
+/* CALLCONNECT SCREEN AREA ****************/
+
+".incall-bottombar-view": {
+  top: null,
+  bottom: 0,
+  height: 80,
+  width: Ti.UI.FILL,
+  backgroundColor: 'transparent',
+  borderColor: 'transparent',
+  borderWidth: 1,
+  zIndex: 99,
+}
+
+".incall-buttonview": {
+	top: 2,
+	borderRadius: 4,
+	width: "30%",
+	backgroundColor: Alloy.CFG.Skin.zBlueButtonColor, //'#4074eb',
+}
+
+".incall-image": {
+	top: 22,
+	height: 24,
+}
+
+".incall-label": {
+	top: 10,
+	font: Alloy.CFG.Skin.titleFont,
+	color: Alloy.CFG.Skin.inverseTextColor
+}
+
+
+/* NOTIFICATION AREA ****************/
+".notification-icon":{
+	top: 0,
+	bottom: 0,
+	left: 15,
+  zIndex: 3,
+	size:16,
+	iconColor:'#333',
+	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".notificationActivityIndicator[platform=android]": {
+	top: 2,
+	left: 5,
+  height: Titanium.UI.FILL,
+  style: Ti.UI.ActivityIndicatorStyle.DARK,
+  backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+  message: '',
+	font: Alloy.CFG.Skin.notificationFont,
+	color: Alloy.CFG.Skin.defaultTextColor, //"#666"
+}
+
+".notificationActivityIndicator[platform=ios]": {
+	top: 2,
+	left: 5,
+  height: Titanium.UI.FILL,
+  style: Ti.UI.ActivityIndicatorStyle.DARK,
+  backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+  message: '',
+	font: Alloy.CFG.Skin.notificationFont,
+	color: Alloy.CFG.Skin.defaultTextColor, //"#666"
+}
+
+".notification-label":{
+	font: Alloy.CFG.Skin.notificationFont,
+	color: Alloy.CFG.Skin.defaultTextColor, //"#666"
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	left: 40,
+	right: 20
+}
+
+/*********DebugSIP ******************/
+".inputfield": {
+	backgroundColor: "#F1F5F8",
+	height: 40
+}
+
+".settingsbutton": {
+	width: Ti.UI.FILL,
+	height: 42,
+	color: "#000",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	borderWidth: 1,
+	backgroundColor: "#e1e1e1"
+}
+
+".loglabel": {
+	font: {
+		fontSize: 9,
+		fontFamily: "Courier New"
+	},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+}
+
+
+/*********NEW STYLES ******************/
+/**********************************************************************************************************************************/
+/**********************************************************************************************************************************/
+".menuiconlabel":{
+  font: {
+    fontFamily: Alloy.Globals.FontAwesome,
+    fontSize: 26,
+    fontWeight: 'normal',
+  },
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+	color: '#7fa57c',
+},
+
+".view-row-separator":{
+	height: 0.5,
+	backgroundColor:'#eee',
+	bottom:0
+},
+
+".view-headerview-form":{
+	backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+	height: 40,
+}
+
+".view-header-separator":{
+	height: 35,
+	backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+	bottom:0
+},
+
+".view-headerview-size":{
+	backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+	height: Ti.UI.SIZE,
+}
+
+".view-header-10dp":{
+	height: 10,
+	backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+},
+
+".view-height-fit":{
+	 height:Ti.UI.SIZE
+},
+
+".view-height-width-fit":{
+	 height:Ti.UI.SIZE,
+	 width:Ti.UI.SIZE
+},
+".view-width-height-fit":{
+	 height:Ti.UI.SIZE,
+	 width:Ti.UI.SIZE
+},
+
+".tableview-settings-form":{
+	backgroundColor: "transparent",
+	left: 12,
+	right: 12,
+},
+
+".tableviewrow-form-row":{
+	height: "60", // was 50
+	backgroundColor: "transparent"
+},
+
+".tableviewrow-rowitem":{
+	height: "50",
+	backgroundColor: "#fff"
+},
+
+// countries picker - use a fixed-width font so it doesn't look retarded
+".tableview-popuplist":{
+	color: Alloy.CFG.Skin.defaultTextColor,
+	font: Alloy.CFG.Skin.fixedWidthFont,
+	textAlign:"left",
+}
+
+".label-paragraph":{
+	left:5,
+	right:5,
+	font:{
+		fontFamily:Alloy.CFG.fontNormal
+	}
+},
+".label-row-title":{
+	left:35,
+	color: Alloy.CFG.textColorLight,
+},
+".label-row-subtitle":{
+	textAlign:"right",
+	right:"35",
+	color:"#666"
+},
+".label-row-togglesubtitle":{
+	textAlign:"left",
+	color:"#666",
+	font: Alloy.CFG.Skin.titleFont,
+},
+".label-row-inlinetext":{
+	textAlign:"left",
+	color:"#666",
+	font: Alloy.CFG.Skin.titleFont,
+	backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+	left: 10,
+	right: 10,
+},
+".label-row":{
+	backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+},
+".label-row-count":{
+	backgroundColor: "#bbb",
+	color: "#fff",
+	textAlign: "center",
+	borderRadius: "8",
+	height: "20",
+	visible: "false",
+	right: "35"
+},
+
+".label-H1":{
+	left:'10dp',right:'10dp',
+	color:'#333',
+	font:{
+		fontFamily: Alloy.CFG.fontNormal,
+		fontSize:'22dp'
+	},
+	textAlign:'left',
+    height:Ti.UI.SIZE
+},
+
+".label-H2":{
+    color:'#333',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:'14dp',
+		fontWeight:'bold'
+	}
+},
+
+".label-H3":{
+    color:'#333',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:'14dp',
+		fontWeight:'bold'
+	}
+},
+".label-H4":{
+    color:'#333',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:'12dp',
+		fontWeight:'bold'
+	}
+},
+".label-H5":{
+    color:'#333',
+	font:{
+		fontFamily: Alloy.CFG.fontItalic,
+		fontSize:'12dp'
+	}
+},
+
+".debuglabel":{
+	textAlign:"left",
+	color:'black',
+	font: {
+        "fontFamily": "Courier New",
+        "fontSize": "11",
+        "fontWeight": 'normal'
+      },
+}
+
+
+// FONT TESTS TO CHECK ROBOTO
+".label-font1":{
+	textAlign:"left",
+	color:"#666",
+//	font: Alloy.CFG.Skin.notificationFont,
+	font: {
+        "fontFamily": "Roboto",
+        "fontSize": "16",
+        "fontWeight": 'normal'
+      },
+}
+
+".label-font4":{
+	textAlign:"left",
+	color:"#666",
+//	font: Alloy.CFG.Skin.notificationFont,
+	font: {
+        "fontFamily": "Roboto-Regular",
+        "fontSize": "16",
+        "fontWeight": 'normal'
+      },
+}
+
+".label-font2":{
+	textAlign:"left",
+	color:"blue",
+	font: {
+        "fontFamily": "Load of bollocks",
+        "fontSize": "16",
+        "fontWeight": 'normal'
+      },
+}
+
+".label-font3":{
+	textAlign:"left",
+	color:"navy",
+	font: {
+        "fontFamily": "Verdana",
+        "fontSize": "16",
+        "fontWeight": 'normal'
+      },
+}
+
+
+
+
+".label-paragraph":{
+	left:'10dp',right:'10dp',
+    color:'#000',
+    verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	font: {
+		fontFamily: Alloy.CFG.normalFont,
+		fontSize:'12dp'
+	}
+},
+
+
+".button-linkButton":{
+    left:'20dp',
+    right:'20dp',
+    height:'30dp',
+    backgroundColor: '#fff',
+    color:'#fff',
+    selectedColor:'#333',
+    backgroundImage:'none',
+	borderRadius:'5dp',
+	borderColor:'#ccc',
+	borderWidth:'1dp',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:'16dp',
+		fontWeight:'bold'
+    }
+},
+
+".fa-row-haschild":{
+	right: "10",
+	icon: "fa-angle-right"
+},
+
+".fa-row-icon":{
+	left:10,
+	size:24,
+	iconColor:'#333'
+},
+
+".fa-row-icon-centered":{
+	left:10,
+	size:24,
+	iconColor:'#333',
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+},
+
+".fa-toggle-icon":{
+	left:0,
+	size:16,
+	iconColor:'#333'
+},
+
+
+
+// Zoopa
+".textfield-row-control":{
+	height : '40dp',
+	left:'10dp',
+	right:'10dp',
+	font:{
+		fontFamily: Alloy.CFG.boldFont,
+		fontSize:'16dp'
+	},
+	borderColor: 'transparent',
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+	color:'#333',
+},
+
+".label-tableviewsection-header":{
+	backgroundColor: 'transparent',
+	left: 10,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	color:"#777",
+	shadowColor:'#fff',
+	shadowOffset:{x:0.5, y:0.5},
+	font: Alloy.CFG.fontText,
+	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM,
+}
+
+".label-lightblue-header":{
+  backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+	left: 0,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	color:"#777",
+	shadowColor:'#fff',
+	shadowOffset:{x:0.5, y:0.5},
+	font: Alloy.CFG.fontText,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+}
+
+".view-playback":{
+	// view for playing back a recording
+	left: 10,
+	right: 10,
+	top: 20,
+	height: 46,
+  borderRadius: 4,
+  borderWidth: 0,
+  borderColor: 'lightgray',
+  backgroundColor: Alloy.CFG.Skin.zLightBlueColor,
+}
+
+
+/*ti.ux.forms.text*/
+
+".view-forms-text-container":{
+	left: 20,
+	right: 20,
+	top: 20,
+	height: "100dp",
+	borderColor: "#66c0ee",
+	borderWidth: "1",
+	backgroundColor: "#fff",
+},
+
+".label-forms-text-title":{
+	top: "5",
+	left: "10"  ,
+	color: "#66c0ee",
+	height:40,
+	font:{
+		fontFamily: Alloy.CFG.fontLight,
+		fontSize:24
+	}
+},
+
+".view-forms-text-separator":{
+	height: "1",
+	left: "10",
+	right: "10",
+	backgroundColor: "#66c0ee"
+},
+
+".label-forms-text-tiptext":{
+	top:130,
+	color:'#666',
+	font:{
+		fontFamily: Alloy.CFG.fontNormal,
+		fontSize:12
+	}
+},
+
+
+".label-forms-text-errortext":{
+	top:'130dp',
+	color:'#f00',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:12
+	}
+}
+".image-forms-text-alert":{
+	top:14,
+	right:15,
+	height:26,
+	width: 28,
+	visible:false,
+	image:WPATH('warning.png')
+},
+
+".activityindicator-forms-text":{
+	right:10,
+	top:10,
+	width:30,
+	height:30,
+	message:'',
+	backgroundColor:'transparent'
+},
+
+".textfield-forms-text":{
+	bottom:5,
+	borderWidth:0,
+	font:{
+		fontFamily:Alloy.CFG.fontNormal,
+		fontSize:18
+	}
+},
+
+".textfield-forms-text[platform=ios]":{
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+	clearButtonMode: Ti.UI.INPUT_BUTTONMODE_ONFOCUS,
+	suppressReturn:true,
+}
+
+".textfield-forms-text[platform=android]":{
+	backgroundColor:'green'
+}
+
+/* ti.ux.iconlabel */
+
+".icon-iconlabel":{
+	left:5,
+	size: 20,
+	textAlign:'left'
+},
+
+".label-iconlabel":{
+	left:"30",
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:14
+	},
+	textAlign:'left'
+}
+
+
+/* ti.ux.iconvalue */
+
+".view-iconvalue":{
+	top:5,
+	height:'50',
+	width:'80'
+
+}
+
+".icon-iconvalue":{
+	top: 0,
+	size: 24,
+	textAlign:'center'
+}
+
+".label-iconvalue":{
+	bottom:3,
+	textAlign:'center',
+	font:{
+		fontFamily:Alloy.CFG.fontBold,
+		fontSize:10
+	}
+}
+
+/*ti.ux.pagingcontrol*/
+
+".view-pagingcontrol":{
+	height:"10",
+//	backgroundColor:"#fff",
+	zIndex: "999",
+	width: Ti.UI.SIZE
+},
+".view-pagingcontrol-dot":{
+	height:4,
+	width:4,
+	borderRadius:2
+},
+".view-pagingcontrol-dot-active":{
+	backgroundColor:"#000"
+}
+".view-pagingcontrol-dot-inactive":{
+	backgroundColor:"#999"
+}
+
+/***
+ * TEMPLATE SPECIFIC STYLES
+ *
+ */
+
+
+/**
+ * 	FRANKY
+ */
+".tableviewrow-scrollableview":{
+	backgroundColor:"#fff"
+}
+
+".detailview-scrollableview":{
+	height:"60",
+	top:"10",
+	backgroundColor:"#fff",
+	disableBounce:"true"
+},
+".actionButton":{
+	backgroundColor:"#B399",
+	color:'#fff',
+	font:{
+		fontFamily: Alloy.CFG.fontBold,
+		fontSize:14
+	},
+	left:"0",
+	right:"0",
+	height:"50"
+}
+
+/* MESSAGELIST WIDGET */
+".listviewlabel":{
+   font: {
+    fontFamily: 'Helvetica Neue',
+    fontSize: '18dp'
+  },
+  textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+},
+".listviewtitle":{
+  font: {
+    fontFamily: 'Helvetica Neue',
+    fontSize: '18dp',
+    fontWeight: 'bold',
+  },
+  top: 0,
+  height:18,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM,
+},
+".listviewdatelabel":{
+  font: {
+    fontFamily: 'Helvetica Neue',
+    fontSize: '13dp'
+  },
+  top: 0,
+  height: 18,
+  textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM,
+},
+".messageinputbar[platform=ios]":{
+  font: {
+    //fontFamily: 'Helvetica Neue',
+    fontSize: '12dp'
+  },
+	bottom: '0dp',
+	height: Ti.UI.SIZE,
+  tintColor: "blue",
+  backgroundColor: "#ddd"
+},
+".messageinputsubview":{
+  backgroundColor: '#ddd',
+  borderWidth: 0,
+  borderRadius: 0,
+},
+".messageinputbar[platform=android]":{
+  color: 'black',
+  font: {
+    //fontFamily: 'Helvetica Neue',
+    fontSize: '12dp'
+  },
+  //backgroundColor: '#cccccc',
+	bottom: '0dp',
+	height: Ti.UI.SIZE,
+	backgroundColor: '#ddd',
+	borderWidth: '4dp',
+	borderColor: '#ddd',
+},
+".messageinput[platform=ios]":{
+  font: {
+    //fontFamily: 'Helvetica Neue',
+    fontSize: '16dp'
+  },
+  scrollable:false,
+  suppressReturn: false,
+  color: 'black',
+  backgroundColor: 'white',
+  tintColor: "blue",
+  borderWidth: 0,
+  borderRadius: 0,
+},
+".messageinput[platform=android]":{
+  font: {
+    //fontFamily: 'Helvetica Neue',
+    fontSize: '16dp'
+  },
+  scrollable:false,
+  suppressReturn: false,
+  color: 'black',
+  backgroundColor: 'white',
+  borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+  borderWidth: 0,
+  borderRadius: 0,
+},
+".messagebutton[platform=ios]":{
+  backgroundColor: '#ddd',
+  tintColor: '#0062dd',
+  borderWidth: 0,
+  borderRadius: 0,
+},
+".messagebutton[platform=android]":{
+  font: {
+    fontSize: '16dp'
+  },
+  tintColor: '#0062dd',
+  backgroundColor: '#ddd',
+  borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+  borderWidth: 0,
+  borderRadius: 0,
+},
+
+".message-buttonview":{
+	// Exist solely for the purpose of being a "click target" as buttons won't fire without the click event
+  top: 4,
+  width: 40,
+  height: 40,
+}
+
+".font16" : {
+  font: {
+    fontSize: '16dp'
+  },
+},
+".font18" : {
+  font: {
+    fontSize: '18dp'
+  },
+},
+".font18bold" : {
+  font: {
+    fontSize: '18dp',
+    fontWeight: 'bold',
+  },
+}
+
+".walkthrough-image" : {
+	left: undefined,
+	right: undefined,
+	top: 2,
+	//width: 254,
+	//height: 490,
+}
+
+".walkthrough-label" : {
+  font: {
+    fontFamily: Alloy.CFG.Skin.fontFamily,
+    fontSize: '17dp',
+    fontWeight: 'normal',
+  },
+  color: 'black',
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+  verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_CENTER,
+  //top: 490,
+  bottom: 0,
+  left: 30,
+  right: 30,
+}
+
+

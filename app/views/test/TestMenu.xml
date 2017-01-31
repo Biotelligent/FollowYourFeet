@@ -1,0 +1,8 @@
+<Alloy>
+  <View id="mainview" layout="absolute" backgroundColor="white" borderRadius="0" top="0">
+    <Require src="NavBar" type="view" id="navbar" bartype="detail" title="L('menu-testmenu', 'Tests')"/>
+    <View id="testview" top="60" backgroundColor="white" height="Ti.UI.FILL">
+      <TableView id="listTable" color="purple" backgroundColor="white" borderRadius="0" top="0" bottom="0"/>
+    </View>
+  </View>
+</Alloy>

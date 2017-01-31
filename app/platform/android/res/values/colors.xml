@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#00796B</color>
+    <color name="primaryDark">#00796B</color>
+    <color name="primaryLight">#009688</color>
+    <color name="cursor">#FF8416</color>
+    <color name="text_color">#616161</color>
+    <color name="text_color_hint">#D7D7D7</color>
+    <size android:width="3dip" />
+</resources>

@@ -1,0 +1,23 @@
+<Alloy>
+    <View backgroundColor="Alloy.CFG.backgroundColorDark" xbackgroundColor="#2A2A2A" bottom="0" class="container" id="mainview" top="0">
+        <ImageView id="headerImage" top="0" height="110" image="/images/menuheader.png" left="0" preventDefaultImage="true" right="0" backgroundColor="Alloy.CFG.backgroundColorBlue" />
+        <View backgroundColor="Alloy.CFG.backgroundColorDark" bottom="120" class="container" layout="vertical" top="110">
+            <ListView backgroundColor="transparent" bottom="0" defaultItemTemplate="menuItemTemplate" id="menulist" left="0" onItemclick="handleItemClick" separatorColor="transparent" top="0" canScroll="false">
+                <Templates>
+                    <Require src="templates/MenuItemTemplate"/>
+                </Templates>
+                <ListSection id="menusection" top="0">
+                    <ListItem detail="false" itemId="Puppet" titleLabel:text="L('menu-apps', 'PUPPET')"/>
+                    <ListItem detail="false" itemId="SearchMap" titleLabel:text="L('menu-3', 'MAP')"/>
+                    <ListItem detail="false" itemId="Calibration" titleLabel:text="L('menu-1', 'CALIBRATE')"/>
+                    <ListItem detail="true" itemId="Config" titleLabel:text="L('menu-2', 'CONFIGURE')"/>
+                    <ListItem detail="true" itemId="test/TestAPIDetail" titleLabel:text="L('menu-4', 'WEB SERVER')"/>
+                    <ListItem detail="true" itemId="LogOutput" titleLabel:text="L('menu-debug', 'LOG')"/>
+                </ListSection>
+              </ListView>
+        </View>
+        <!--ImageView bottom="120" height="110" image="/images/menuheader.png" left="0" preventDefaultImage="true" right="0"/-->
+        <!--Button class="feet-button-logout" id="helpButton" bottom="60" onClick="doHelpClick" zIndex="2" title="    \uf129    ABOUT" color="Alloy.CFG.titleColorLight" /-->
+        <Button class="feet-button-logout" id="logoutButton" onClick="doLogoutClick" zIndex="2" title="   \uf011  LOGOUT" />
+    </View>
+</Alloy>

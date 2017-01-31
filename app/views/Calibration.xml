@@ -1,0 +1,47 @@
+<Alloy>
+	<View id="mainview" class="feet-view-main" >
+    <Require src="NavBar" type="view" id="navbar" title="L('menu-apiep', 'Puppet Calibration')"/>
+      <View id="colorView" class="feet-view-inner" backgroundColor="black" layout="vertical" xonClick="handleBackgroundClick" borderWidth="0" borderColor="black">
+
+        <Label id="headingLabel" class="settingslabel" top="0" left="10" right="10" textAlign="center" borderColor="transparent" borderWidth="0" text=""/>
+        <View id="seriesView" top="30" height="Ti.UI.SIZE" width="Ti.UI.FILL" layout="absolute">
+        <Button id="button01L"  xclass="iconbutton" top="0" left="50" width="130" height="100"
+                backgroundImage="/images/01L.png"
+                onClick="handleButtonClick"
+
+        />
+          <Button id="button01R"  xclass="iconbutton" top="0" right="50" width="130" height="100"
+                  backgroundImage="/images/01R.png"
+                  onClick="handleButtonClick"
+
+          />
+           <Button id="button02"  xclass="iconbutton" top="80" left="50" right="50" height="100"
+                  backgroundImage="/images/02.png"
+                  onClick="handleButtonClick"
+
+          />
+          <Button id="button03"  xclass="iconbutton" top="160" left="50" right="50" height="100"
+                  backgroundImage="/images/03.png"
+                  onClick="handleButtonClick"
+
+          />
+          <Button id="button04"  xclass="iconbutton" top="240" left="50" right="50" height="100"
+                  backgroundImage="/images/04.png"
+                  onClick="handleButtonClick"
+
+          />
+          <Button id="button05"  xclass="iconbutton" top="320" left="100" right="100" height="100"
+                  backgroundImage="/images/05.png"
+                  onClick="handleButtonClick"
+
+          />
+          <Button id="button06"  xclass="iconbutton" top="400" left="100" right="100" height="100"
+                  backgroundImage="/images/06.png"
+                  onClick="handleButtonClick"
+
+          />
+      </View>
+      
+    </View>
+   </View>
+</Alloy>

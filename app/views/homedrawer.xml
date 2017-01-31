@@ -1,0 +1,34 @@
+<Alloy>
+  <!-- Settings are in style (not theme) app.tss -->
+    <!-- This is the IOS main "drawer" style window. Widget top=20 shows the iOS7 status bar -->
+    <Widget platform="ios" src="nl.fokkezb.drawer" navbarHidden="false" id="drawer" >
+        <Window top="0" modal="true" fullscreen="true" navbarHidden="false" role="leftWindow" id="leftWindow" onWindowDidOpen="doWindowDidOpen" onOpen="doOpenDrawer" onPostLayout="doPostLayout">
+          <Require src="MainMenu" type="view" id="mainmenu"/>
+        </Window>
+        <Window top="0" navbarHidden="false" role="centerWindow" id="centerWindow">
+          <View id="blank"/>
+        </Window>
+    </Widget>
+
+
+    <Widget platform="android" src="nl.fokkezb.drawer" id="drawer"
+    	xtheme="Theme.DrawerWindow"
+            theme="Theme.Feet"
+            leftDrawerWidth="Alloy.CFG.leftDrawerWidth"
+			rightDrawerWidth="20dp"
+
+        exitOnClose="false"
+    	drawerLayout="true"
+    	hideToolbar="true"
+    	onWindowDidOpen="doWindowDidOpen" xonOpen="doOpenDrawer" onClose="doCloseDrawer" xonPostLayout="doPostLayout" onandroidback="doAndroidBack"
+
+    	>
+        <View role="leftWindow" id="leftWindow"  >
+          <Require src="MainMenu" type="view" id="mainmenu"/>
+        </View>
+        <View role="centerWindow" id="centerWindow" top="22"/>
+        <View role="rightWindow" width="40dp" backgroundColor="red" id="rightWindow" />
+    </Widget>
+
+
+</Alloy>

@@ -1,0 +1,52 @@
+"#alert": {
+	backgroundColor: "transparent",
+	backgroundImage: "null",
+	opacity: 1,
+	navBarHidden: true,
+	xmodal: false,
+},
+".alert_black": {
+	backgroundColor: "#5694FC",
+	opacity: 0.2
+},
+".alert_background": {
+  top: 50,
+	backgroundColor: "white",
+	height: 250,
+	left: 20,
+	right: 20,
+	opacity: 1.0,
+},
+"#alert_title": {
+	backgroundColor: "white",
+	top: 30,
+	left: 20,
+	right: 20,
+	height: 30,
+	font: {
+		fontSize: 18,
+		fontWeight: "bold"
+	},
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+},
+".alert_scroll": {
+	contentHeight: "auto",
+  backgroundColor: "white",
+  opacity: 0.85,
+	top: 80,
+	left: 20,
+	right: 20,
+	bottom: 64,
+	showVerticalScrollIndicator: true,
+},
+"#alert_content": {
+	backgroundColor: "white",
+	width: Ti.UI.FILL,
+	color: "#616161",
+	top: 0,
+	font: {
+		fontSize: 16
+	},
+	verticalAlign: Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+}

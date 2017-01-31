@@ -1,0 +1,33 @@
+<Alloy>
+	<View class="navbar darkbackground" id="navbar">
+    <!-- TESTING ANDROID WINDOW TOP Label id="testLabel" top="0" height="2" zIndex="999" backgroundColor="green" width="Ti.UI.FILL"/ -->
+
+	  <!-- JMH: These original design button images are too small on xxhdpi android screens -->
+	  <View id="leftClickView" top="0" left="0" width="55" height="Ti.UI.FILL" xborderColor="red" xborderWidth="2" onTouchstart="onLeftButtonClick"/>
+    <Widget src="ti.ux.iconbutton" id="leftButton" class="navbar-uxbutton" zIndex="2"
+      left="10"
+      icon="fa-bars"
+      xplatform="true"
+      />
+
+    <Label class="feet-navbar-titlelabel" id="titleLabel" text="L('menu-feet', 'Feet')" onClick="onTitleClick"/>
+
+    <Widget src="ti.ux.iconbutton" id="rightButton" class="navbar-uxbutton" zIndex="2"
+      right="60"
+      icon="fa-caret-down"
+      xplatform="true"
+      onClick="onRightButtonClick"
+      />
+
+	  <!-- This ZChat icon is a button so I can activate the context menu or jump to help etc -->
+    <Button class="navbar-iconbutton" id="iconButton"
+      right="5"
+      tintColor="transparent"
+      image="null"
+      backgroundImage="/images/nav_zbadge.png"
+      onClick="onIconButtonClick"
+      />
+     <ImageView class="contact-zbadge" id="betaImage" top="10" right="5" zIndex="4" visible="false" />
+
+	</View>
+</Alloy>

@@ -1,0 +1,29 @@
+<Alloy>
+	  <View id="mainview" class="feet-view-main" >
+    <Require src="NavBar" type="view" id="navbar" title="L('menu-apiep', 'Endpoint Test')"/>
+	  <View id="notificationview" class="feet-view-inner" layout="absolute">
+	    <Require src="NotificationBar" type="view" top="0" left="0" right="0" height="0" visible="false"/>
+      <ListView id="list" defaultItemTemplate="apiTemplate" top="0" bottom="220" left="0" canScroll="true" separatorColor="transparent" backgroundColor="Alloy.CFG.backgroundColorDark">
+        <Templates>
+           <ItemTemplate name="apiTemplate" top="5" height="Alloy.CFG.listitemHeight" accessoryType="Ti.UI.LIST_ACCESSORY_TYPE_NONE">
+              <View bindId="subview" backgroundColor="transparent" top="0" left="10" right="10" height="Ti.UI.FILL" layout="vertical">
+                <Label class="feet-list-titlelabel" bindId="apikeyLabel" top="0" left="0" />
+                <TextField class="feet-textfield" bindId="apivalueText" top="2" left="0" right="0" onChange="TFUpdate" />
+            </View>
+          </ItemTemplate>
+        </Templates>
+
+        <ListSection id="section" top="10">
+          <HeaderView>
+            <View id="listHeaderView" top="0" height="40" backgroundColor="#bfbec0" layout="absolute">
+              <Label id="headerLabel" class="feet-list-titlelabel" text="API" top="10" left="20" right="20" height="Ti.UI.SIZE" wordWrap="true" textAlign="Ti.UI.TEXT_ALIGNMENT_LEFT" backgroundColor="transparent" />
+              <Button id="headerGoButton" class="feet-button-connected" right="2" title="SEND" zIndex="2" onClick="handleGoClick"/>
+            </View>
+          </HeaderView>
+        </ListSection>
+
+      </ListView>
+      <TextArea id="responseArea" class="feet-label-log" value="[response]" bottom="0" height="200" backgroundColor="white" />
+    </View>
+    </View>
+</Alloy>
